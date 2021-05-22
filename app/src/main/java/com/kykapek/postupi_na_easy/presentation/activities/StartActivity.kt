@@ -1,8 +1,9 @@
-package com.firsovam.screensforabiturient
+package com.firsovam.postupi_na_easy
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.kykapek.postupi_na_easy.presentation.activities.MenuActivity
 import kotlinx.android.synthetic.main.activity_start.*
 
 class StartActivity : AppCompatActivity() {
@@ -11,8 +12,7 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start)
 
         startbutton.setOnClickListener {
-            val leagueIntent = Intent (this, MenuActivity::class.java)
-            startActivity(leagueIntent)
+            startActivity(Intent(this, MenuActivity::class.java))
         }
     }
 }

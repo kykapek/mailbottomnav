@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "245938118951",
+    "project_id": "screensforabiturient",
+    "storage_bucket": "screensforabiturient.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245938118951:android:3bb91ac6e9c945e3fe8902",
+        "android_client_info": {
+          "package_name": "com.firsovam.screensforabiturient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245938118951-2nfq43f4v0r316jeudtvh48l8dpn43ks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqH-j5drfIALqZd2zTIjhh_oWk0av-Pjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245938118951-2nfq43f4v0r316jeudtvh48l8dpn43ks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

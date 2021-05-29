@@ -11,5 +11,9 @@
     <color name="violet_pale">#FFDDCEFA</color>
     <color name="link_Water">#FFdadfee</color>
     <color name="carousel_pink">#FFf9e5ee</color>
-
+    <color name="gray_card">#535353</color>
+    <color name="all_black">#000000</color>
+    <color name="darkwhite">#E5E5E5</color>
+    <color name="blue">#FA0DCDEF</color>
+    <color name="blue_secondary">#D0148CC3</color>
 </resources>

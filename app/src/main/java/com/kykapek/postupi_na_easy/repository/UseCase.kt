@@ -10,13 +10,8 @@ abstract class UseCase<T> {
     private var backgroundContext: CoroutineContext = Dispatchers.IO
     private var foregroundContext: CoroutineContext = Dispatchers.Main
 
-    companion object {
-        private const val TAG = "USE_CASE"
-    }
-
     abstract suspend fun executeOnBackground(): T
 
-    // default
     fun execute() {
         execute {}
     }

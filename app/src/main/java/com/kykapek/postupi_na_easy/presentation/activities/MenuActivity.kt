@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.firsovam.postupi_na_easy.R
+//import com.google.firebase.database.FirebaseDatabase
 import com.kykapek.postupi_na_easy.gateway.DatabaseServiceImpl
 import com.kykapek.postupi_na_easy.repository.AppRepositoryImpl
 import kotlinx.android.synthetic.main.activity_menu.*
@@ -23,6 +24,7 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         appRepository.context = this
+
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment

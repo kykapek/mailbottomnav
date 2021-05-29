@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
+import androidx.navigation.fragment.findNavController
 import com.firsovam.postupi_na_easy.R
 import com.kykapek.postupi_na_easy.presentation.OlympAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -31,28 +32,8 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    /**
-     * (1)
-     * Сделать кнопку над ресайклером,
-     * по нажатию на которую ресайклер будет исчезать (не нужна лайвдата)
-     */
-
-    /**
-     * (2)
-     * Слева от кнопки сделать EditText (поиск), и при каждом изменении текста добавлять
-     * в ресайклер три элемента name = "Леха" subject = "Alice"
-     * TextWatcher (не нужна лайвдата)
-     */
-
-    /**
-     * (3)
-     * При вводе 0 в поиск, обновить данные для ввода key = "Op",
-     * при этом для этого случая сделать очистку, а не обновление ресайклера
-     */
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         recycler.adapter = adapter
 
         with(homeViewModel) {
@@ -61,5 +42,18 @@ class HomeFragment : Fragment() {
             }
             getOlympsByKey(key = "yui")
         }
+
+        btnFilter.setOnClickListener {
+            findNavController().navigate(R.id.toFilter)
+        }
+
+        /**
+         * Спасить как можно больше данных, сверстать фильтры по аналогии и реализовать выдачу данных по key в DatabaseService
+         * [com.kykapek.postupi_na_easy.gateway.DatabaseService.getOlympsByKey]
+         */
+
+        /**
+         * Иконки  - олимпиада, баллы, и тп + . По АНАЛогии с этим фграментом сделавть кнопку и заголовок в вложенном
+         */
     }
 }

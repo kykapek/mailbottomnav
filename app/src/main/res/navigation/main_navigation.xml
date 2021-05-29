@@ -6,10 +6,33 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.kykapek.postupi_na_easy.presentation.fragments.home.HomeFragment"></fragment>
+        android:name="com.kykapek.postupi_na_easy.presentation.fragments.home.HomeFragment">
+        <action
+            android:id="@+id/toFilter"
+            app:destination="@id/filter"></action>
+    </fragment>
 
     <fragment
+        android:id="@+id/filter"
+        android:name="com.kykapek.postupi_na_easy.presentation.fragments.filter.FilterFragment">
+        <action
+            android:id="@+id/toFilterOlympMain"
+            app:destination="@id/filter_olymp_main"></action>
+    </fragment>
+    <fragment
         android:id="@+id/favorites"
-        android:name="com.kykapek.postupi_na_easy.presentation.fragments.favourites.FavoritesFragment"></fragment>
+        android:name="com.kykapek.postupi_na_easy.presentation.fragments.favourites.FavoritesFragment" />
+
+    <fragment
+        android:id="@+id/filter_olymp_main"
+        android:name="com.kykapek.postupi_na_easy.presentation.fragments.filter.filterolympmain.FilterOlympMain">
+        <argument
+            android:name="header"
+            app:argType="string" />
+        <argument
+            android:name="buttonsSet"
+            app:argType="string[]" />
+    </fragment>
+
 
 </navigation>

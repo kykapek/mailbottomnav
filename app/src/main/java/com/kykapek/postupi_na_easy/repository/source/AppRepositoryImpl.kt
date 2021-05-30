@@ -17,7 +17,7 @@ class AppRepositoryImpl : AppRepository {
         context?.getSharedPreferences("1", Context.MODE_PRIVATE)
     }
 
-    override fun getOlympsByKey(key: String): List<Olymp> {
+    override suspend fun getOlympsByKey(key: String): List<Olymp> {
         return database.getOlympsByKey(key)
     }
 

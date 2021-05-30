@@ -15,17 +15,17 @@ class StartActivity : AppCompatActivity() {
 
         startbutton.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
-            /*var database = FirebaseDatabase.getInstance().reference
-            var step = database.setValue("55676")
-            step.addOnCompleteListener {
-                Log.i("Test", "Comp")
-            }
-            step.addOnCanceledListener {
-                Log.i("Test", "Can")
-            }
-            step.addOnFailureListener {
-                Log.e("Test", "Fail", it)
-            }*/
+            //val database = FirebaseDatabase.getInstance().reference
+            //val step = database.setValue("я даун")
+            //step.addOnCompleteListener {
+            //    Log.i("Test", "Comp")
+            //}
+            //step.addOnCanceledListener {
+            //    Log.i("Test", "Can")
+            //}
+            //step.addOnFailureListener {
+            //    Log.e("Test", "Fail", it)
+            //}
         }
 
     }

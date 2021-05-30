@@ -37,9 +37,16 @@ class HomeFragment : Fragment() {
 
         with(homeViewModel) {
             olympsLiveData.observe(viewLifecycleOwner) {
+                homeViewModel.isLoadingLiveData.value = false
                 adapter.update(it.toMutableList())
             }
-            getOlympsByKey(key = "yui")
+            isLoadingLiveData.observe(viewLifecycleOwner) {
+                if (it) {
+                    progressBar.visibility = View.VISIBLE
+                } else {
+                    progressBar.visibility = View.INVISIBLE
+                }
+            }
         }
 
         btnFilter.setOnClickListener {
@@ -50,6 +57,7 @@ class HomeFragment : Fragment() {
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                homeViewModel.isLoadingLiveData.value = true
                 homeViewModel.getOlympsByKey(s.toString())
             }
         }

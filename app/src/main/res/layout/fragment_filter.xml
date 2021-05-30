@@ -50,32 +50,37 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            app:icon="@drawable/ic_olymp"
             android:text="Олимпиады"
             android:textAllCaps="false"
             app:rippleColor="@color/blue_secondary"
             app:strokeColor="@color/blue_secondary"
-            app:strokeWidth="1dp"></com.google.android.material.button.MaterialButton>
+            app:strokeWidth="1dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_choose_program"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            app:icon="@drawable/ic_favorites"
+            app:iconSize="24dp"
             android:text="Программы обучения"
             android:textAllCaps="false"
             app:rippleColor="@color/blue_secondary"
             app:strokeColor="@color/blue_secondary"
-            app:strokeWidth="1dp"></com.google.android.material.button.MaterialButton>
+            app:strokeWidth="1dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_choose_tasks"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            app:icon="@drawable/ic_literature"
+            app:iconSize="24dp"
             android:text="Задания ЕГЭ"
             android:textAllCaps="false"
             app:rippleColor="@color/blue_secondary"
             app:strokeColor="@color/blue_secondary"
-            app:strokeWidth="1dp"></com.google.android.material.button.MaterialButton>
+            app:strokeWidth="1dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

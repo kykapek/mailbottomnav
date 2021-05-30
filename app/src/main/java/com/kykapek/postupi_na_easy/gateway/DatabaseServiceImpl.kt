@@ -1,18 +1,22 @@
 package com.kykapek.postupi_na_easy.gateway
 
-import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.kykapek.postupi_na_easy.repository.models.Olymp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.launch
 
 // Запросы в бд (выполнение)
 class DatabaseServiceImpl : DatabaseService {
     val source = FirebaseDatabase.getInstance().reference
 
-    override fun getOlympsByKey(key: String): List<Olymp> {
+    override suspend fun getOlympsByKey(key: String): List<Olymp> {
         val list = mutableListOf<Olymp>()
+        val channel = Channel<List<Olymp>>(1)
         val getdata = object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {}
             override fun onDataChange(snapShot: DataSnapshot) {
@@ -33,11 +37,13 @@ class DatabaseServiceImpl : DatabaseService {
                     )
                     list.add(item)
                 }
+                CoroutineScope(Dispatchers.Default).launch {
+                    channel.send(list)
+                }
             }
         }
         source.addValueEventListener(getdata)
         source.addListenerForSingleValueEvent(getdata)
-        Log.i("TEST1", list.toString())
-        return list.filter { it.name.startsWith(key) }
+        return channel.receive().filter { it.name.toLowerCase().contains(key) }
     }
 }

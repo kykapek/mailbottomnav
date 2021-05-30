@@ -19,6 +19,9 @@ class HomeViewModel : ViewModel() {
     val olympsLiveData: MutableLiveData<List<Olymp>> by lazy {
         MutableLiveData<List<Olymp>>()
     }
+    val isLoadingLiveData: MutableLiveData<Boolean> by lazy {
+        MutableLiveData<Boolean>()
+    }
 
     // ui -> viewModel -> useCase -> repo -> source
     // ui <- liveData <- onComplete <- useCase <- repo <- source
@@ -26,7 +29,15 @@ class HomeViewModel : ViewModel() {
         getOlympsByKeyUseCase.apply {
             this.key = key
         }.execute {
-            onError {}
+            onError {
+
+            }
+            onStart {
+                isLoadingLiveData.value = true
+            }
+            onStop {
+                isLoadingLiveData.value = false
+            }
             onComplete {
                 // здесь мы уже получили данные от репо
                 olympsLiveData.value = it

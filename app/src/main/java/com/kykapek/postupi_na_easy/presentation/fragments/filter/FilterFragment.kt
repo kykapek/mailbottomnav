@@ -11,15 +11,6 @@ import kotlinx.android.synthetic.main.fragment_filter.*
 
 class FilterFragment : Fragment() {
 
-    companion object {
-        var mInstance: FilterFragment? = null
-
-        @JvmStatic
-        fun getInstance(): FilterFragment {
-            return mInstance ?: FilterFragment().also { mInstance = it }
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,7 +25,26 @@ class FilterFragment : Fragment() {
             findNavController().popBackStack()
         }
         btn_choose_olymp.setOnClickListener {
-            findNavController().navigate(R.id.toFilterOlympMain)
+            findNavController().navigate(
+                FilterFragmentDirections.toDetailedFilter(
+                    "Олимпиады", arrayOf("Предметы", "Уровень олиимпиады", "Класс")
+                )
+            )
+        }
+        btn_choose_program.setOnClickListener {
+            findNavController().navigate(
+                FilterFragmentDirections.toDetailedFilter(
+                    "Программы обучения",
+                    arrayOf("Направления", "Предметы ЕГЭ", "Баллы ЕГЭ", "Город", "ВУЗ")
+                )
+            )
+        }
+        btn_choose_tasks.setOnClickListener {
+            findNavController().navigate(
+                FilterFragmentDirections.toDetailedFilter(
+                    "Задания ЕГЭ", arrayOf("Предмет", "Номер задания")
+                )
+            )
         }
     }
 }

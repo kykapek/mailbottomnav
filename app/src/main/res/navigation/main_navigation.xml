@@ -9,23 +9,23 @@
         android:name="com.kykapek.postupi_na_easy.presentation.fragments.home.HomeFragment">
         <action
             android:id="@+id/toFilter"
-            app:destination="@id/filter"></action>
+            app:destination="@id/filter" />
     </fragment>
 
     <fragment
         android:id="@+id/filter"
         android:name="com.kykapek.postupi_na_easy.presentation.fragments.filter.FilterFragment">
         <action
-            android:id="@+id/toFilterOlympMain"
-            app:destination="@id/filter_olymp_main"></action>
+            android:id="@+id/toDetailedFilter"
+            app:destination="@id/filter_olymp_detailed" />
     </fragment>
     <fragment
         android:id="@+id/favorites"
         android:name="com.kykapek.postupi_na_easy.presentation.fragments.favourites.FavoritesFragment" />
 
     <fragment
-        android:id="@+id/filter_olymp_main"
-        android:name="com.kykapek.postupi_na_easy.presentation.fragments.filter.filterolympmain.FilterOlympMain">
+        android:id="@+id/filter_olymp_detailed"
+        android:name="com.kykapek.postupi_na_easy.presentation.fragments.filter.DetailedFilterFragment">
         <argument
             android:name="header"
             app:argType="string" />

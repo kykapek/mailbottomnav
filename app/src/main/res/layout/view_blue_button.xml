@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_choose_program"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:textAllCaps="false"
+    app:icon="@drawable/ic_favorites"
+    app:iconSize="24dp"
+    app:rippleColor="@color/blue_secondary"
+    app:strokeColor="@color/blue_secondary"
+    app:strokeWidth="1dp"
+    tools:text="Говно" />

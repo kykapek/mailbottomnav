@@ -4,5 +4,5 @@ import com.kykapek.postupi_na_easy.repository.models.Olymp
 
 // Запросы в бд
 interface DatabaseService {
-    fun getOlympsByKey(key: String): List<Olymp>
+    suspend fun getOlympsByKey(key: String): List<Olymp>
 }

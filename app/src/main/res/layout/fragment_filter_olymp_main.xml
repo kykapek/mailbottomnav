@@ -24,18 +24,19 @@
         app:rippleColor="@color/blue_secondary" />
 
     <TextView
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:text="Олимпиады"
         android:textColor="@color/blue_secondary"
         android:textSize="19sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/container"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -44,38 +45,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.35">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_choose_olymp_subject"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Предметы"
-            android:textAllCaps="false"
-            app:rippleColor="@color/blue_secondary"
-            app:strokeColor="@color/blue_secondary"
-            app:strokeWidth="1dp"></com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_choose_olymp_level"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Уровень олимпиады"
-            android:textAllCaps="false"
-            app:rippleColor="@color/blue_secondary"
-            app:strokeColor="@color/blue_secondary"
-            app:strokeWidth="1dp"></com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_choose_olymp_class"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Класс"
-            android:textAllCaps="false"
-            app:rippleColor="@color/blue_secondary"
-            app:strokeColor="@color/blue_secondary"
-            app:strokeWidth="1dp"></com.google.android.material.button.MaterialButton>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

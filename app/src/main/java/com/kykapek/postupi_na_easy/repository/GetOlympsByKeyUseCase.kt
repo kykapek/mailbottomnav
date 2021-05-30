@@ -1,6 +1,7 @@
 package com.kykapek.postupi_na_easy.repository
 
 import com.kykapek.postupi_na_easy.presentation.activities.MenuActivity.Companion.appRepository
+import com.kykapek.postupi_na_easy.repository.models.Olymp
 import kotlin.properties.Delegates
 
 class GetOlympsByKeyUseCase : UseCase<List<Olymp>>() {

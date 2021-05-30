@@ -30,7 +30,7 @@ class FilterOlympMain : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btn_main_search_olymp_back.setOnClickListener {
+        btn_main_to_search_back.setOnClickListener {
             findNavController().popBackStack()
         }
     }

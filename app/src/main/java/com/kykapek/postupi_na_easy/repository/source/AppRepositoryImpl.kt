@@ -2,6 +2,7 @@ package com.kykapek.postupi_na_easy.repository
 
 import android.content.Context
 import com.kykapek.postupi_na_easy.presentation.activities.MenuActivity
+import com.kykapek.postupi_na_easy.repository.models.Olymp
 
 class AppRepositoryImpl : AppRepository {
     var context: Context? = null

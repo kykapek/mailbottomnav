@@ -3,7 +3,7 @@ package com.kykapek.postupi_na_easy.presentation.fragments.home
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kykapek.postupi_na_easy.repository.GetOlympsByKeyUseCase
-import com.kykapek.postupi_na_easy.repository.Olymp
+import com.kykapek.postupi_na_easy.repository.models.Olymp
 
 class HomeViewModel : ViewModel() {
     /**

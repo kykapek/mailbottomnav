@@ -49,6 +49,8 @@ class HomeFragment : Fragment() {
             }
         }
 
+
+
         btnFilter.setOnClickListener {
             findNavController().navigate(R.id.toFilter)
         }

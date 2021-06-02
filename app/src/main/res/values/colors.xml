@@ -16,4 +16,12 @@
     <color name="darkwhite">#E5E5E5</color>
     <color name="blue">#FA0DCDEF</color>
     <color name="blue_secondary">#D0148CC3</color>
+    <color name="green">#D00DF347</color>
+    <color name="yellow_ch">#D093C605</color>
+    <color name="orange_hist">#D0CA8905</color>
+    <color name="red">#D0EF3817</color>
+    <color name="green_canvas">#D00BAA45</color>
+    <color name="dark_green">#D003732C</color>
+    <color name="brown">#D0712D0D</color>
+    <color name="white_purple">#B740CA</color>
 </resources>

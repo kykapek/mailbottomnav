@@ -37,7 +37,7 @@
 
     <LinearLayout
         android:id="@+id/container"
-        android:layout_width="200sp"
+        android:layout_width="290sp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

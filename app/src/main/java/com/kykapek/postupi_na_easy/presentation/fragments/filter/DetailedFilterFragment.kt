@@ -30,15 +30,86 @@ class DetailedFilterFragment : Fragment() {
             findNavController().popBackStack()
         }
         tvHeader.text = args.header
-        args.buttonsSet.forEach {
-            val button = layoutInflater.inflate(
-                R.layout.view_blue_button,
-                container,
-                false
-            ) as MaterialButton
-            button.text = it
-            button.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_history)
-            container.addView(button)
+        if (tvHeader.text == "Олимпиады") {
+            var i = 1
+            args.buttonsSet.forEach {
+                val button = layoutInflater.inflate(
+                    R.layout.view_blue_button,
+                    container,
+                    false
+                ) as MaterialButton
+                button.text = it
+                if (i == 1) {
+                    button.icon =
+                        ContextCompat.getDrawable(requireContext(), R.drawable.ic_subjects)
+                    container.addView(button)
+                }
+                if (i == 2) {
+                    button.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_level)
+                    container.addView(button)
+                }
+                if (i == 3) {
+                    button.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_class)
+                    container.addView(button)
+                }
+                i++
+            }
+        }
+        if (tvHeader.text == "Программы обучения") {
+            var i = 1
+            args.buttonsSet.forEach {
+                val button = layoutInflater.inflate(
+                    R.layout.view_blue_button,
+                    container,
+                    false
+                ) as MaterialButton
+                button.text = it
+                if (i == 1) {
+                    button.icon =
+                        ContextCompat.getDrawable(requireContext(), R.drawable.ic_directions)
+                    container.addView(button)
+                }
+                if (i == 2) {
+                    button.icon =
+                        ContextCompat.getDrawable(requireContext(), R.drawable.ic_subjects)
+                    container.addView(button)
+                }
+                if (i == 3) {
+                    button.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_scores)
+                    container.addView(button)
+                }
+                if (i == 4) {
+                    button.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_city)
+                    container.addView(button)
+                }
+                if (i == 5) {
+                    button.icon =
+                        ContextCompat.getDrawable(requireContext(), R.drawable.ic_university)
+                    container.addView(button)
+                }
+                i++
+            }
+        }
+        if (tvHeader.text == "Задания ЕГЭ") {
+            var i = 1
+            args.buttonsSet.forEach {
+                val button = layoutInflater.inflate(
+                    R.layout.view_blue_button,
+                    container,
+                    false
+                ) as MaterialButton
+                button.text = it
+                if (i == 1) {
+                    button.icon =
+                        ContextCompat.getDrawable(requireContext(), R.drawable.ic_subjects)
+                    container.addView(button)
+                }
+                if (i == 2) {
+                    button.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_numbers)
+                    container.addView(button)
+                }
+                i++
+            }
         }
     }
 }

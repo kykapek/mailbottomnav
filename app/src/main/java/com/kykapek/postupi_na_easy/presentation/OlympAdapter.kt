@@ -1,5 +1,7 @@
 package com.kykapek.postupi_na_easy.presentation
 
+import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -26,9 +28,15 @@ class OlympAdapter : AbstractListAdapter<Olymp>(
 
     override fun View.onBind(item: Olymp, bindingPosition: Int, itemCount: Int) {
         tvName.text = item.name
+        val linkozavr = item.link
         val stringSubjects = item.subjects
+        println(linkozavr)
         println(item.name)
         println(stringSubjects)
+        setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(linkozavr))
+            context.startActivity(intent)
+        }
         val lstValues: List<String> = stringSubjects.split(",").map { it -> it.trim() }
         containerSubjectsIcons.removeAllViews()
         lstValues.forEach { it ->
@@ -209,6 +217,7 @@ class OlympAdapter : AbstractListAdapter<Olymp>(
                 "Неизвестен"
             }
         }
+
         //tvLevel.text = "Уровень: $level"
     }
 }

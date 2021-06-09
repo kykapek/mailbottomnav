@@ -27,13 +27,15 @@ class DatabaseServiceImpl : DatabaseService {
                     val olympLevel = i.child("level").value as String
                     val olympOrganizer = i.child("olympiad_is_held_by").value as String
                     val olympName = i.child("olympiads").value as String
+                    val olympLink = i.child("link").value as String
                     val item = Olymp(
                         olympName,
                         olympClasses,
                         olympItems,
                         olympDates,
                         olympLevel,
-                        olympOrganizer
+                        olympOrganizer,
+                        olympLink
                     )
                     list.add(item)
                 }

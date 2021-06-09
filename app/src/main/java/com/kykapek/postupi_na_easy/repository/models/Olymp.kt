@@ -6,5 +6,6 @@ data class Olymp(
     val subjects: String,
     val date: String,
     val level: String,
-    val organizer: String
+    val organizer: String,
+    val link: String
 )
